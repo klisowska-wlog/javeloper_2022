@@ -11,6 +11,7 @@
     <modules>
         <module>java_producer</module>
         <module>java_consumer</module>
+        <module>spring_kafka</module>
     </modules>
 
     <properties>

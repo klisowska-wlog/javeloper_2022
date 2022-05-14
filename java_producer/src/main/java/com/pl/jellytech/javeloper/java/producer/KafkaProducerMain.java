@@ -32,6 +32,7 @@ public class KafkaProducerMain {
 			}
 			logger.debug("Writing message {} with key {}", message, key);
 			producer.send(new ProducerRecord<>(topic, key, message));
+
 			message = scanner.nextLine();
 		}
 		logger.info("Finished writing messages to topic {}. Exiting application ...", topic);

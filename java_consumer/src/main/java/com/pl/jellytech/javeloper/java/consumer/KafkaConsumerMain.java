@@ -26,7 +26,7 @@ public class KafkaConsumerMain {
 		KafkaConsumer<String, String> consumer = KafkaConsumerManager.createConsumer(groupId);
 		List<String> topics = Arrays.stream(topicsStr.split(",")).map(String::trim).collect(Collectors.toList());
 
-		KafkaConsumerManager.continuouslyPollMessages(consumer, topics);
+		KafkaConsumerManager.infinitelyConsume(consumer, topics);
 
 		logger.info("Finished reading messages from topics {}. Exiting application ...", topicsStr);
 	}
